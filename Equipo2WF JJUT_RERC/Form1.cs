@@ -8,12 +8,11 @@ namespace Equipo2WF_JJUT_RERC
         }
         private int contadorTrabajores = 1;
         private int Complemento = 5000;
-        private string[,] Empleado;
         double mostrarSueldoBruto;
         double mostrarExencion;
         double mostrarRetencionDeImpuestos;
         double mostrarSueldoNeto;
-
+        private List<string[]> listaEmpleados = new List<string[]>();
         public bool ValidarCampos()
         {
             if (textBox1.Text == "" || comboBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
@@ -35,7 +34,7 @@ namespace Equipo2WF_JJUT_RERC
                 MessageBox.Show("Por favor, ingrese un número válido para la exención.");
                 return false;
             }
-            if (!int.TryParse(textBox4.Text, out int numeroSemanas)) 
+            if (!int.TryParse(textBox4.Text, out int numeroSemanas))
             {
                 MessageBox.Show("Por favor, ingrese un número entero para el numero de semanas.");
                 return false;
@@ -47,7 +46,7 @@ namespace Equipo2WF_JJUT_RERC
             mostrarSueldoBruto = double.Parse(textBox2.Text);
             mostrarExencion = double.Parse(textBox3.Text);
             TemporizadorResultados.Start();
-            if (comboBox1.SelectedIndex == 3) 
+            if (comboBox1.SelectedIndex == 3)
             {
                 mostrarSueldoBruto += Complemento;
             }
@@ -62,15 +61,16 @@ namespace Equipo2WF_JJUT_RERC
 
         public void GuardarDatos()
         {
-            Empleado = new string[contadorTrabajores,8];
-            Empleado[contadorTrabajores,1] = "Trabajador #" + contadorTrabajores + ": " + textBox1.Text;
-            Empleado[contadorTrabajores,2] = "Nivel: " + comboBox1.Text;
-            Empleado[contadorTrabajores,3] = "Sueldo Bruto: " + textBox2.Text;
-            Empleado[contadorTrabajores,4] = "Exención: " + textBox3.Text;
-            Empleado[contadorTrabajores,5] = "Número de Semanas: " + textBox4.Text;
-            Empleado[contadorTrabajores,6] = "Sueldo Bruto Total: " + mostrarSueldoBruto.ToString("C");
-            Empleado[contadorTrabajores,7] = "Retención De Impuestos: " + mostrarRetencionDeImpuestos.ToString("C");
-            Empleado[contadorTrabajores,8] = "Sueldo Neto A Cobrar: " + mostrarSueldoNeto.ToString("C");
+            string[] datos = new string[8];
+            datos[0] = "Trabajador #" + (listaEmpleados.Count + 1) + ": " + textBox1.Text;
+            datos[1] = comboBox1.Text;
+            datos[2] = textBox2.Text;
+            datos[3] = textBox3.Text;
+            datos[4] = textBox4.Text;
+            datos[5] = mostrarSueldoBruto.ToString("C");
+            datos[6] = mostrarRetencionDeImpuestos.ToString("C");
+            datos[7] = mostrarSueldoNeto.ToString("C");
+            listaEmpleados.Add(datos);
 
         }
         public void LimpiarCampos()
@@ -85,14 +85,14 @@ namespace Equipo2WF_JJUT_RERC
         {
             if (ValidarCampos())
             {
-                if(ValidarNumeros())
+                if (ValidarNumeros())
                 {
-                contadorTrabajores++;
-                label1.Text = "Nombre Del Empleado #" + contadorTrabajores.ToString() + ":";
-                MostrarDatos();
-                GuardarDatos();
+                    contadorTrabajores++;
+                    label1.Text = "Nombre Del Empleado #" + contadorTrabajores.ToString() + ":";
+                    MostrarDatos();
+                    GuardarDatos();
                 }
-                
+
             }
         }
 
@@ -102,6 +102,13 @@ namespace Equipo2WF_JJUT_RERC
             label6.Text = "Sueldo Bruto Total:";
             label7.Text = "Retención De Impuestos:";
             label8.Text = "Sueldo Neto A Cobrar:";
+            LimpiarCampos();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 VentanaInformacionEmpleados = new Form2(listaEmpleados);
+            VentanaInformacionEmpleados.ShowDialog();
         }
     }
 }
