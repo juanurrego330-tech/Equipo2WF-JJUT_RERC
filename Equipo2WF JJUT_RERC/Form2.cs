@@ -16,6 +16,7 @@ namespace Equipo2WF_JJUT_RERC
         public Form2(List<string[]> ListaDelForm1)
         {
             InitializeComponent();
+            /*
             datosEmpleados = ListaDelForm1;
             dataGridView1.ColumnCount = 8;
             dataGridView1.Columns[0].Name = "Nombre";
@@ -31,6 +32,8 @@ namespace Equipo2WF_JJUT_RERC
                 dataGridView1.Rows.Add(i[0], i[1], i[2], i[3], i[4], i[5], i[6],i[7]);
             }
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            */
+            
         }
     }
 }
