@@ -16,24 +16,13 @@ namespace Equipo2WF_JJUT_RERC
         public Form2(List<string[]> ListaDelForm1)
         {
             InitializeComponent();
-            /*
+
             datosEmpleados = ListaDelForm1;
-            dataGridView1.ColumnCount = 8;
-            dataGridView1.Columns[0].Name = "Nombre";
-            dataGridView1.Columns[1].Name = "Nivel";
-            dataGridView1.Columns[2].Name = "Sueldo Bruto";
-            dataGridView1.Columns[3].Name = "Exencion De Impuestos";
-            dataGridView1.Columns[4].Name = "N° Semanas";
-            dataGridView1.Columns[5].Name = "Sueldo Bruto Total";
-            dataGridView1.Columns[6].Name = "Retencion De Impuestos";
-            dataGridView1.Columns[7].Name = "Sueldo Neto A Cobrar";
-            foreach (string[] i in datosEmpleados)
+            datosEmpleados = datosEmpleados.OrderBy(x => x[1]).ToList();
+            foreach (string[] a in datosEmpleados)
             {
-                dataGridView1.Rows.Add(i[0], i[1], i[2], i[3], i[4], i[5], i[6],i[7]);
+               label1.Text += a[0] + "\n" + a[1] + "\n" + a[2] + "\n" +  a[3] + "\n" + a[4] + "\n" + a[5] + "\n" + a[6] + "\n" + a[7] + "\n" + a[8] + "\n" + "\n";
             }
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            */
-            
         }
     }
 }

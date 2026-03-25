@@ -50,8 +50,9 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(76, 169);
+            label1.Location = new Point(76, 174);
             label1.Name = "label1";
             label1.Size = new Size(187, 20);
             label1.TabIndex = 0;
@@ -59,8 +60,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Location = new Point(217, 220);
+            label2.Location = new Point(217, 222);
             label2.Name = "label2";
             label2.Size = new Size(46, 20);
             label2.TabIndex = 2;
@@ -68,24 +70,28 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.None;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Manual", "Cualificado", "Oficinista o Directivo" });
-            comboBox1.Location = new Point(269, 220);
+            comboBox1.Location = new Point(269, 217);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(138, 28);
-            comboBox1.TabIndex = 3;
+            comboBox1.TabIndex = 1;
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(269, 169);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 27);
-            textBox1.TabIndex = 4;
+            textBox1.TabIndex = 0;
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.Location = new Point(287, 435);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
@@ -102,8 +108,9 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(165, 272);
+            label3.Location = new Point(165, 270);
             label3.Name = "label3";
             label3.Size = new Size(98, 20);
             label3.TabIndex = 6;
@@ -111,8 +118,9 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.Location = new Point(97, 316);
+            label4.Location = new Point(97, 318);
             label4.Name = "label4";
             label4.Size = new Size(166, 20);
             label4.TabIndex = 7;
@@ -120,16 +128,18 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(269, 272);
+            textBox2.Anchor = AnchorStyles.None;
+            textBox2.Location = new Point(269, 266);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(138, 27);
-            textBox2.TabIndex = 8;
+            textBox2.TabIndex = 2;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Location = new Point(66, 364);
+            label5.Location = new Point(66, 366);
             label5.Name = "label5";
             label5.Size = new Size(197, 20);
             label5.TabIndex = 9;
@@ -137,22 +147,25 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(269, 316);
+            textBox3.Anchor = AnchorStyles.None;
+            textBox3.Location = new Point(269, 314);
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(138, 27);
-            textBox3.TabIndex = 10;
+            textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(269, 364);
+            textBox4.Anchor = AnchorStyles.None;
+            textBox4.Location = new Point(269, 362);
             textBox4.Margin = new Padding(3, 4, 3, 4);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(59, 27);
-            textBox4.TabIndex = 11;
+            textBox4.TabIndex = 4;
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Location = new Point(547, 173);
             label6.Name = "label6";
@@ -162,8 +175,9 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
-            label7.Location = new Point(512, 224);
+            label7.Location = new Point(512, 222);
             label7.Name = "label7";
             label7.Size = new Size(173, 20);
             label7.TabIndex = 13;
@@ -171,8 +185,9 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
-            label8.Location = new Point(527, 272);
+            label8.Location = new Point(527, 271);
             label8.Name = "label8";
             label8.Size = new Size(158, 20);
             label8.TabIndex = 14;
@@ -180,6 +195,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.None;
             button2.Location = new Point(512, 435);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
@@ -191,6 +207,7 @@
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.None;
             button3.Location = new Point(512, 474);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
@@ -198,6 +215,7 @@
             button3.TabIndex = 16;
             button3.Text = "Salir";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
